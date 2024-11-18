@@ -7,7 +7,7 @@ from PIL import Image
 import gdown
 
 # Google Drive 파일 ID
-file_id = '1NKIhMhUeRC0vPptHwT4it-LMYhamVDyi'
+file_id = '1QRfaB23ZyE4DxRPlXs3Fh-rorWUcOjwC'
 
 # Google Drive에서 파일 다운로드 함수
 @st.cache(allow_output_mutation=True)
@@ -52,11 +52,11 @@ if uploaded_file is not None:
     st.markdown("<h3>클래스별 확률:</h3>", unsafe_allow_html=True)
 
     if prediction == labels[0]:
-         st.write("중냉 꿋굿")
+         st.write("중냉 너무 좋아!!")
     elif prediction == labels[1]:
-         st.write("짜장면은 굿")
+         st.write("짜장면은 너무 맛있어")
     elif prediction == labels[2]:
-         st.write("짬뽕은 맵지만 맛있어!!")
+         st.write("짬뽕은 스트레스 받을때 먹으면 더 맛있어!")
 
     for label, prob in zip(labels, probs):
         # HTML 및 CSS로 확률을 시각화
